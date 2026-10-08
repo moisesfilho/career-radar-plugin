@@ -43,6 +43,7 @@ The rubric evaluates role and seniority, technical fit, leadership, cloud and en
 
 ```text
 plugin.json
+assets/career-radar.svg
 skills/career-radar/SKILL.md
 skills/career-radar/docs/
 examples/

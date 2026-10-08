@@ -43,6 +43,7 @@ A metodologia avalia cargo e senioridade, aderência técnica, liderança, cloud
 
 ```text
 plugin.json
+assets/career-radar.svg
 skills/career-radar/SKILL.md
 skills/career-radar/docs/
 examples/
