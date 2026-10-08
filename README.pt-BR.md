@@ -50,7 +50,7 @@ examples/
 tests/
 ```
 
-A primeira versão é somente Skill. Ela usa o histórico disponibilizado pela tarefa ou agente do ChatGPT e não possui banco de dados permanente. Uma futura fase MCP poderá adicionar histórico persistente, fontes controladas e acompanhamento de candidaturas, sem enviar candidaturas automaticamente.
+A primeira versão é somente Skill. Ela usa o histórico disponibilizado pela tarefa ou agente do ChatGPT e não possui banco de dados permanente. Uma futura fase MCP poderá adicionar histórico persistente, fontes controladas e acompanhamento de candidaturas, sem enviar candidaturas automaticamente. Consulte a [Política de Privacidade](PRIVACY.md).
 
 ## Qualidade
 

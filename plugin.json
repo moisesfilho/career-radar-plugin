@@ -20,6 +20,10 @@
         "developerName": "Moises Filho",
         "category": "Productivity",
         "capabilities": ["Discover jobs", "Evaluate job fit", "Analyze resume gaps"],
+        "websiteURL": "https://github.com/moisesfilho/career-radar-plugin",
+        "supportURL": "https://github.com/moisesfilho/career-radar-plugin/issues",
+        "privacyPolicyURL": "https://github.com/moisesfilho/career-radar-plugin/blob/main/PRIVACY.md",
+        "termsOfServiceURL": "https://github.com/moisesfilho/career-radar-plugin/blob/main/LICENSE",
         "defaultPrompt": [
           "Find new remote jobs matching my profile.",
           "Evaluate recent jobs against my resume.",

@@ -15,7 +15,7 @@ jobs:
       - name: Validate package
         run: ./tests/validate.sh
       - name: Build package archive
-        run: zip -qr /tmp/career-radar-plugin.zip plugin.json assets skills examples README.md LICENSE
+        run: zip -qr /tmp/career-radar-plugin.zip plugin.json assets skills examples README.md LICENSE PRIVACY.md
       - name: Publish summary
         run: |
           {

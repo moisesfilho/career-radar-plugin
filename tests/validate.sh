@@ -2,7 +2,7 @@
 set -euo pipefail
 
 command -v jq >/dev/null || { printf '%s\n' 'jq is required' >&2; exit 1; }
-jq -e '.name == "career-radar" and .version and .extensions."com.openai".displayName' plugin.json >/dev/null
+jq -e '.name == "career-radar" and .version and .extensions."com.openai".interface.displayName and .extensions."com.openai".interface.privacyPolicyURL' plugin.json >/dev/null
 
 skill='skills/career-radar/SKILL.md'
 test -f "$skill"

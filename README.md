@@ -50,7 +50,7 @@ examples/
 tests/
 ```
 
-The first release is skill-only. It uses the history exposed by the ChatGPT task or agent and does not include a permanent database. A future MCP phase can add durable history, controlled job sources, and application tracking without submitting applications.
+The first release is skill-only. It uses the history exposed by the ChatGPT task or agent and does not include a permanent database. A future MCP phase can add durable history, controlled job sources, and application tracking without submitting applications. See the [Privacy Policy](PRIVACY.md).
 
 ## Quality
 
