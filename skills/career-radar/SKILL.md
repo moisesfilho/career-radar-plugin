@@ -5,12 +5,13 @@ description: Use when a user wants recurring or on-demand job discovery, especia
 
 # Career Radar
 
-Career Radar helps a user discover and prioritize job opportunities. It is designed to run as an on-demand request or as a scheduled ChatGPT task. The host performs web research; this skill defines the search protocol, evaluation method, and report format.
+Career Radar helps each user discover and prioritize job opportunities using an independent profile. It is designed to run as an on-demand request or as a scheduled ChatGPT task. The host performs web research; this skill defines the onboarding flow, search protocol, evaluation method, and report format.
 
 ## Operating principles
 
 - Never apply to a job, contact a recruiter, or submit personal information.
 - Use the user's resume and stated preferences as the source of truth for their profile.
+- Never assume, reuse, or expose another user's profile, resume, preferences, or search history.
 - Prefer primary sources: the employer's career page or the original application page.
 - Do not invent a salary, requirement, date, location, technology, or hiring status.
 - Mark uncertain facts as `Não verificado` and explain why.
@@ -18,18 +19,22 @@ Career Radar helps a user discover and prioritize job opportunities. It is desig
 - Do not repeat a previously reported opportunity unless there is a meaningful update.
 - Treat a job as a distinct opportunity by its canonical application URL, then by employer plus normalized title.
 
-## First-run setup
+## First-run onboarding
 
-If the user has not provided a profile, ask for the minimum information needed:
+At the first use, or whenever the current profile is incomplete, collect a profile before searching. Ask for the fields below in one concise onboarding message. Do not require a specific resume format.
 
 1. Resume or a structured career summary.
 2. Target roles and seniority.
-3. Work model, geography, and work authorization constraints.
-4. Preferred technologies, industries, and exclusions.
-5. Salary expectations, if the user wants compensation filtering.
-6. Search frequency and preferred report window, when setting up a task.
+3. Preferred and required technologies, industries, and exclusions.
+4. Work model, geography, time zone, and work authorization constraints.
+5. Languages, salary expectations, and other filters, if relevant.
+6. Desired search frequency and report window, when setting up a task.
 
-Do not require the user to provide individual job links. The purpose of this skill is to discover them.
+Confirm the interpreted profile before the first search. If the user declines to provide a resume, continue with the structured summary and explicitly reduce confidence in technical-fit conclusions. Do not require the user to provide individual job links. The purpose of this skill is to discover them.
+
+Keep the profile scoped to the user's ChatGPT conversation, task, or agent context. The skill does not create a permanent profile store.
+
+See `docs/user-profile.md` for the neutral profile contract.
 
 ## Search protocol
 
@@ -88,10 +93,12 @@ End with a compact comparison table and one suggested next action. Never present
 
 ## Scheduled task setup
 
-When the user asks for a recurring search, help them configure the host's scheduling feature. The task instruction should contain:
+When the user asks for a recurring search, collect or confirm the cadence, preferred execution time, time zone, freshness window, minimum compatibility score, maximum results, target roles, and delivery format. Daily and weekly searches are both valid. Help the user configure the host's scheduling feature; the plugin itself does not create or modify schedules.
+
+The task instruction should contain the user's own profile and preferences, or refer to profile information that the host explicitly makes available to that task:
 
 ```text
 Use Career Radar to search for new opportunities matching my saved resume and preferences. Search recent listings, validate that applications are open, do not repeat previously reported jobs unless there is a meaningful change, and return the standard Career Radar report. Do not apply to any job.
 ```
 
-The schedule belongs to ChatGPT or the user's autonomous agent. This plugin does not create or modify schedules.
+If the user requests a daily or weekly schedule without specifying a time zone, ask for it instead of guessing. If the host cannot persist the profile or history for scheduled runs, explain the limitation and include the necessary profile fields in the task instructions.

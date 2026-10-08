@@ -25,3 +25,13 @@
 - Company size:
 - Travel:
 - Exclusions:
+
+## Search schedule
+
+- Cadence: daily / weekly / on demand
+- Time:
+- Time zone:
+- Freshness window:
+- Minimum compatibility score:
+- Maximum results:
+- Delivery format:

@@ -20,6 +20,8 @@ Career Radar grew from that inspiration: make the process simpler and automate t
 - Scores opportunities from 0 to 100 with an explicit rubric.
 - Highlights strengths, gaps, risks, duplicates, and recommended next actions.
 - Works with a recurring task prompt supplied by ChatGPT or an autonomous agent.
+- Onboards each user with an independent resume and preference profile.
+- Supports daily or weekly searches with configurable filters and score thresholds.
 
 ## Installation
 
@@ -31,7 +33,7 @@ Create a recurring task with an instruction such as:
 
 > Use Career Radar to search for new opportunities matching my saved resume and preferences. Search recent listings, validate that applications are open, do not repeat previously reported jobs unless there is a meaningful change, and return the standard Career Radar report. Do not apply to any job.
 
-The host owns scheduling and web access. This plugin does not create schedules or claim that history is persistent when it is unavailable.
+The host owns scheduling and web access. Each user configures their own cadence, time zone, filters, and minimum score. This plugin does not create schedules or claim that history is persistent when it is unavailable.
 
 ## Evaluation
 
@@ -47,7 +49,7 @@ examples/
 tests/
 ```
 
-The first release is skill-only. A future MCP phase can add durable history, controlled job sources, and application tracking without submitting applications.
+The first release is skill-only. It uses the history exposed by the ChatGPT task or agent and does not include a permanent database. A future MCP phase can add durable history, controlled job sources, and application tracking without submitting applications.
 
 ## Quality
 

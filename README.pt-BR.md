@@ -20,6 +20,8 @@ Este projeto nasceu dessa inspiração, mas com uma proposta mais simples: autom
 - Atribui uma pontuação de 0 a 100 com critérios explícitos.
 - Destaca aderência, lacunas, riscos, duplicidades e próximos passos.
 - Funciona com prompts de tarefas recorrentes do ChatGPT ou agentes autônomos.
+- Realiza onboarding de cada usuário com currículo e preferências independentes.
+- Permite buscas diárias ou semanais com filtros e pontuação mínima configuráveis.
 
 ## Instalação
 
@@ -31,7 +33,7 @@ Crie uma tarefa recorrente com uma instrução semelhante a:
 
 > Use o Career Radar para buscar novas oportunidades compatíveis com meu currículo e preferências salvas. Pesquise vagas recentes, confirme se as candidaturas estão abertas, não repita vagas já apresentadas salvo mudança relevante e retorne o relatório padrão. Não se candidate a nenhuma vaga.
 
-O agendamento e o acesso à web pertencem ao host. O plugin não cria agendamentos nem afirma que o histórico é persistente quando ele não está disponível.
+O agendamento e o acesso à web pertencem ao host. Cada usuário configura sua própria frequência, fuso horário, filtros e pontuação mínima. O plugin não cria agendamentos nem afirma que o histórico é persistente quando ele não está disponível.
 
 ## Avaliação
 
@@ -47,7 +49,7 @@ examples/
 tests/
 ```
 
-A primeira versão é somente Skill. Uma futura fase MCP poderá adicionar histórico persistente, fontes controladas e acompanhamento de candidaturas, sem enviar candidaturas automaticamente.
+A primeira versão é somente Skill. Ela usa o histórico disponibilizado pela tarefa ou agente do ChatGPT e não possui banco de dados permanente. Uma futura fase MCP poderá adicionar histórico persistente, fontes controladas e acompanhamento de candidaturas, sem enviar candidaturas automaticamente.
 
 ## Qualidade
 

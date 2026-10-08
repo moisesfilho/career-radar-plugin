@@ -1,7 +1,7 @@
 {
   "$schema": "https://schemas.openai.com/plugins/plugin.json",
   "name": "career-radar",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A scheduled career radar that finds recent remote jobs, evaluates them against a user's resume, and highlights the best opportunities.",
   "extensions": {
     "com.openai": {
