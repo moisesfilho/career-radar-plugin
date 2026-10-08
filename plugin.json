@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.openai.com/plugins/plugin.json",
+  "name": "career-radar",
+  "version": "0.1.0",
+  "description": "A scheduled career radar that finds recent remote jobs, evaluates them against a user's resume, and highlights the best opportunities.",
+  "extensions": {
+    "com.openai": {
+      "displayName": "Career Radar",
+      "shortDescription": "Find and evaluate remote jobs",
+      "longDescription": "Career Radar searches for recent remote opportunities, validates that applications are still open, scores each job against the user's resume and preferences, and produces an evidence-based report without applying automatically.",
+      "developerName": "Moises Filho",
+      "category": "career"
+    }
+  }
+}

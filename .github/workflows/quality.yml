@@ -1,0 +1,28 @@
+name: Quality
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate package
+        run: ./tests/validate.sh
+      - name: Build package archive
+        run: zip -qr /tmp/career-radar-plugin.zip plugin.json skills examples README.md LICENSE
+      - name: Publish summary
+        run: |
+          {
+            echo '## Quality summary'
+            echo '| Check | Result |'
+            echo '| --- | --- |'
+            echo '| Plugin manifest and skill frontmatter | Passed |'
+            echo '| Secret scan | Passed |'
+            echo '| ZIP assembly | Passed |'
+          } >> "$GITHUB_STEP_SUMMARY"
