@@ -6,6 +6,12 @@ O Career Radar é uma skill de plugin portátil para o ChatGPT descobrir vagas r
 
 > O Career Radar nunca se candidata automaticamente. O usuário revisa cada oportunidade e decide o próximo passo.
 
+## Origem da ideia
+
+A ideia do Career Radar surgiu enquanto eu procurava formas de automatizar a pesquisa de vagas compatíveis com o meu perfil profissional. Durante essa pesquisa, encontrei o projeto open source [career-ops](https://github.com/career-ops-hq/career-ops), que realiza uma análise detalhada do link de uma vaga e da compatibilidade dela com o perfil do candidato. O projeto também gera métricas úteis para ajudar a identificar se uma oportunidade é adequada e o que pode ser destacado no currículo ou em uma entrevista.
+
+Este projeto nasceu dessa inspiração, mas com uma proposta mais simples: automatizar a busca inicial de vagas por meio de um Agendamento do ChatGPT na web. A ideia é que a tarefa encontre oportunidades compatíveis, aplique um nível mínimo de compatibilidade e forneça orientações práticas para cada candidatura.
+
 ## Recursos
 
 - Busca vagas na web sem exigir que o usuário forneça links individuais.
